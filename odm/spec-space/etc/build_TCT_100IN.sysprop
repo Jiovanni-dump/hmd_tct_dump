@@ -1,0 +1,4 @@
+### [TCT-5796] add new India Ringtones
+ro.config.ringtone=HumanMelody.ogg,HumanMelody.ogg
+ro.config.alarm_alert=Vavo.ogg
+ro.config.notification_sound=Notification8.ogg

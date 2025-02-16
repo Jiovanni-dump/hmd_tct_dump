@@ -1,0 +1,39 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.odm.brand=HMD
+ro.product.odm.device=TCT
+ro.product.odm.manufacturer=HMD Global
+ro.product.odm.model=HMD Skyline
+ro.product.odm.name=Tomcat_00WW
+ro.odm.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.odm.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.odm.product.cpu.abilist64=arm64-v8a
+ro.odm.build.date=Mon Dec 23 16:14:05 UTC 2024
+ro.odm.build.date.utc=1734970445
+ro.odm.build.fingerprint=HMD/Tomcat_00WW/TCT:15/AQ3A.240912.001/00WW_2_270:user/release-keys
+ro.odm.build.id=AQ3A.240912.001
+ro.odm.build.tags=release-keys
+ro.odm.build.type=user
+ro.odm.build.version.incremental=00WW_2_270
+ro.odm.build.version.release=12
+ro.odm.build.version.release_or_codename=15
+ro.odm.build.version.sdk=32
+####################################
+# from device/hmd/tomcat/odm.prop
+####################################
+## Load skuid prop
+import /odm/${ro.boot.skuid}/etc/build.prop
+####################################
+# from variable ADDITIONAL_ODM_PROPERTIES
+####################################
+ro.vendor.qti.va_odm.support=1
+####################################
+# from variable PRODUCT_ODM_PROPERTIES
+####################################
+ro.odm.build.media_performance_class=31
+# Auto-added by post_process_props.py
+persist.sys.usb.config=none
+# end of file
+
