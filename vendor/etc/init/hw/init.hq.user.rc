@@ -1,0 +1,82 @@
+service hwdiag /vendor/bin/hwdiag
+    class main
+    user root
+    group root system vendor_qti_diag sdcard_rw cache bluetooth drmrpc
+    seclabel u:r:hwdiag:s0
+
+on boot
+    setprop vendor.diag.inp 1
+    mkdir /mnt/vendor/persist/flag
+    chmod 0776 /mnt/vendor/persist/flag
+    chown system system /mnt/vendor/persist/flag/
+    chmod 0664 /mnt/vendor/persist/flag/MMI2.FLG
+    chown system system /mnt/vendor/persist/flag/MMI2.FLG
+    chmod 0664 /mnt/vendor/persist/flag/PCBA.FLG
+    chown system system /mnt/vendor/persist/flag/PCBA.FLG
+    chmod 0664 /mnt/vendor/persist/flag/RUNIN.FLG
+    chown system system /mnt/vendor/persist/flag/RUNIN.FLG
+    chmod 0664 /mnt/vendor/persist/flag/MMI1.FLG
+    chown system system /mnt/vendor/persist/flag/MMI1.FLG
+    chmod 0664 /mnt/vendor/persist/flag/FULL.FLG
+    chown system system /mnt/vendor/persist/flag/FULL.FLG
+    chmod 0664 /mnt/vendor/persist/flag/MMI3.FLG
+    chown system system /mnt/vendor/persist/flag/MMI3.FLG
+    chmod 0664 /mnt/vendor/persist/flag/AUDIO.FLG
+    chown system system /mnt/vendor/persist/flag/AUDIO.FLG
+    chmod 0664 /mnt/vendor/persist/flag/BAROMETER.FLG
+    chown system system /mnt/vendor/persist/flag/BAROMETER.FLG
+    chmod 0664 /mnt/vendor/persist/flag/DIAG.FLG
+    chown system system /mnt/vendor/persist/flag/DIAG.FLG
+    chmod 0664 /mnt/vendor/persist/flag/DUALCAM.FLG
+    chown system system /mnt/vendor/persist/flag/DUALCAM.FLG
+    chmod 0664 /mnt/vendor/persist/flag/DUALCAMCHECK.FLG
+    chown system system /mnt/vendor/persist/flag/DUALCAMCHECK.FLG
+    chmod 0664 /mnt/vendor/persist/flag/OIS.FLG
+    chown system system /mnt/vendor/persist/flag/OIS.FLG
+    chmod 0664 /mnt/vendor/persist/flag/BT.FLG
+    chown system system /mnt/vendor/persist/flag/BT.FLG
+    chmod 0664 /mnt/vendor/persist/flag/FT.FLG
+    chown system system /mnt/vendor/persist/flag/FT.FLG
+    chmod 0664 /mnt/vendor/persist/flag/RF.FLG
+    chown system system /mnt/vendor/persist/flag/RF.FLG
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+    #chown system system /proc/cmdline
+    #chmod 0666 /proc/cmdline
+    chmod 777 /data/vendor/key_provisioning/drmkeydebug
+    chown system system /sys/class/power_supply/battery/shipmode
+    chmod 0666 /sys/class/power_supply/battery/shipmode
+    chmod 777 /proc/cameraModuleInfo
+    chown system system /sys/class/power_supply/battery/batt_slate_mode
+    chmod 0666 /sys/class/power_supply/battery/batt_slate_mode
+    chown system system /sys/class/qcom-battery/ship_mode_en
+    chmod 0666 /sys/class/qcom-battery/ship_mode_en
+    chown system system /sys/class/qcom-battery/wireless_boost_en
+    chmod 0666 /sys/class/qcom-battery/wireless_boost_en
+
+# Modify by dongzhipeng for TCT-815 2024/03/05 begin
+service hqreadfacsvc /vendor/bin/hqread keybox
+    class main
+    user root
+    disabled
+    oneshot
+    group root
+    seclabel u:r:hqread:s0
+
+on property:vendor.hqread.trigger=1
+    start hqreadfacsvc
+
+service hqreadsvc /vendor/bin/hqread atcmd
+    class main
+    user root
+    disabled
+    oneshot
+    group root system
+    seclabel u:r:hqread:s0
+
+on property:sys.hqread.trigger=1
+    start hqreadsvc
+
+on property:vendor.hq.temp=1
+    setprop vendor.hq.boot_end ${sys.boot_completed}
+# Modify by dongzhipeng for TCT-815 2024/03/05 end

@@ -1,0 +1,6 @@
+# silead fingerprint begin
+on post-fs-data
+    mkdir /data/vendor/silead 0770 system system
+    chown system system /dev/silead_fp
+    chmod 0777 /dev/silead_fp
+# silead fingerprint end

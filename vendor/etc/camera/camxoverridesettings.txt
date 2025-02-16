@@ -1,0 +1,5 @@
+logConfigMask=0x80
+multiCameraHWSyncMask=0x1
+AECGainThresholdForQCFA=2
+enableMFLOEMCustomization=1
+numPCRsBeforeStreamOn=1

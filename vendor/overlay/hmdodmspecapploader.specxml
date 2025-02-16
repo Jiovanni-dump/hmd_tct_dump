@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config-list>
+    <config device="TCT">
+        <overlay-list>
+            <overlay status="enable" apptype="product-overlay" apppath="FrameworksResPer" packageName="android.performance.common"/>
+            <overlay status="enable" apptype="product-overlay" apppath="ActivationOverlay_HQ" packageName="com.hmdglobal.app.activation.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="HMDFrameworks_TCT" packageName="com.hmdglobal.framework.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="HMDTelephony_TCT" packageName="com.hmdglobal.phone.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="RROWifi_TCT" packageName="com.google.android.wifi.resources.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="HMDSetupWizardOverlay_TCT" packageName="com.hmdglobal.app.setupwizardext.overlay"/>
+            <overlay status="enable" apptype="product-overlay" apppath="HMDGmsSampleOverlay_TCT" packageName="com.hmdglobal.android.gmsintegration.overlay"/>
+        </overlay-list>
+        <feature-list>
+            <feature name="android.hardware.telephony.euicc"/>
+            <feature name="com.google.android.feature.AER_OPTIMIZED"/>
+            <feature name="com.hmdglobal.android.feature.5G_EXPERIENCE"/>
+            <feature name="com.hmdglobal.android.feature.YEAR2024" />
+            <feature name="com.hmdglobal.android.feature.PRODUCT_TCT"/>
+        </feature-list>
+        <apk-list>
+            <apk status="enable" apptype="product-app" apppath="OdmGetlogapk" packageName="com.log.setlog"></apk>
+            <apk status="enable" apptype="system_ext-app" apppath="HMDConsumerTrials" packageName="com.hmdglobal.app.consumertrials"></apk>
+
+            <apk status="enable" removable="true" apptype="system-app" apppath="facebook" packageName="com.facebook.katana"></apk>
+            <apk status="enable" apptype="product-priv-app" apppath="SarSensorManager" packageName="com.hmdglobal.app.sarsensormanager"></apk>
+            <apk status="enable" apptype="product-priv-app" apppath="instantKey" packageName="com.hmdglobal.app.instantkey"></apk>
+            <apk status="enable" apptype="system_ext-app" apppath="MoodsCoreService" packageName="com.hmdglobal.app.moodsservice"></apk>
+            <apk status="enable" apptype="product-app" apppath="DigitalDetox" packageName="com.hmdglobal.app.digitaldetox"></apk>
+            <apk status="enable" apptype="system-priv-app" apppath="EuiccGoogle" packageName="com.google.android.euicc"></apk>
+            <apk status="enable" apptype="system-app" apppath="MyEuiccOverlayApp" packageName="com.hmdglobal.android.hmdeuiccoverlayapp.partnercustomizer"></apk>
+            <apk status="enable" apptype="system-app" apppath="NfcSec" packageName="com.android.nfc"></apk>
+            <apk status="enable" apptype="system-app" apppath="PlayAutoInstallStub_TCT" packageName="android.autoinstalls.config.hmdglobal.tomcat"></apk>
+            <apk status="enable" apptype="system-app" apppath="GmsSampleIntegration_TCT" packageName="com.hmdglobal.android.gmsintegration"></apk>
+            <apk status="enable" apptype="product-priv-app" apppath="Omacp" packageName="com.hmdglobal.app.omacp"></apk>
+        </apk-list>
+    </config>
+</config-list>
+
