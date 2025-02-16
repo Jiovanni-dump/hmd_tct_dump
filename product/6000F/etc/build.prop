@@ -1,0 +1,53 @@
+# begin HMD cust pruduct build properties
+ro.build.product=TCT
+ro.product.model.num=00WW
+ro.build.display.id=00WW_2_270
+ro.product.system.device=TCT
+ro.product.product.device=TCT
+ro.product.system_ext.device=TCT
+ro.product.bootimage.device=TCT
+ro.product.product.name=Tomcat_00WW
+ro.product.system.name=Tomcat_00WW
+ro.product.system_ext.name=Tomcat_00WW
+ro.product.bootimage.name=Tomcat_00WW
+ro.build.product.name=Tomcat_00WW
+ro.system.build.fingerprint=HMD/Tomcat_00WW/TCT:15/AQ3A.240912.001/00WW_2_270:user/release-keys
+ro.product.build.fingerprint=HMD/Tomcat_00WW/TCT:15/AQ3A.240912.001/00WW_2_270:user/release-keys
+ro.system_ext.build.fingerprint=HMD/Tomcat_00WW/TCT:15/AQ3A.240912.001/00WW_2_270:user/release-keys
+ro.bootimage.build.fingerprint=HMD/Tomcat_00WW/TCT:15/AQ3A.240912.001/00WW_2_270:user/release-keys
+ro.build.version.base_os=
+ro.product.product.model=HMD Skyline
+ro.product.system.model=HMD Skyline
+ro.product.system_ext.model=HMD Skyline
+ro.product.bootimage.model=HMD Skyline
+ro.product.nickname=HMD Skyline
+ro.product.board=Tomcat
+ro.build.version.incremental=00WW_2_270
+ro.product.build.version.incremental=00WW_2_270
+ro.system.build.version.incremental=00WW_2_270
+ro.system_ext.build.version.incremental=00WW_2_270
+ro.bootimage.build.version.incremental=00WW_2_270
+ro.build.software.version=V2.270
+ro.build.software.subversion=B01
+ro.product.system.brand=HMD
+ro.product.product.brand=HMD
+ro.product.system_ext.brand=HMD
+ro.product.bootimage.brand=HMD
+ro.product.system.manufacturer=HMD Global
+ro.product.product.manufacturer=HMD Global
+ro.product.system_ext.manufacturer=HMD Global
+ro.product.bootimage.manufacturer=HMD Global
+ro.system.build.shipment=true
+# end cust build properties
+
+####################################
+# from cust prop
+####################################
+### create for oneimage 6000F
+ro.com.google.clientidbase=android-hmd
+ro.com.google.clientidbase.ms=android-hmd-terr1-rso2
+ro.com.google.clientidbase.vs=android-hmd-terr1-rso2
+ro.com.google.clientidbase.tx=android-hmd-terr1-rso2
+ro.com.google.clientidbase.pg=android-hmd-deo2
+
+
